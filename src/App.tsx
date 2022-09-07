@@ -5,9 +5,9 @@ import { TopView } from './modules';
 export const App = () => {
   return (
     <ChakraProvider>
-      <TopView/>
+      <TopView />
     </ChakraProvider>
-  )
-}
+  );
+};
 
 export default App;

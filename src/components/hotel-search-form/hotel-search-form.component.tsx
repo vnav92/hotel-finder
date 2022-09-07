@@ -6,12 +6,10 @@ import styles from './hotel-search-form.module.scss';
 
 type HotelSearchFormProps = {
   className?: string;
-}
+};
 
-export const HotelSearchForm: React.FC<HotelSearchFormProps> = ({ className }) => {
-  return (
-    <Box className={classNames(styles.formWrapper, className)}>
-
-    </Box>
-  )
-}
+export const HotelSearchForm: React.FC<HotelSearchFormProps> = ({
+  className,
+}) => {
+  return <Box className={classNames(styles.formWrapper, className)}></Box>;
+};
