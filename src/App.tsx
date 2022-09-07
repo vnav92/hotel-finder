@@ -1,9 +1,12 @@
 import React from 'react';
-import './App.css';
+import { ChakraProvider } from '@chakra-ui/react';
+import { TopView } from './modules';
 
 export const App = () => {
   return (
-    <p>hello world</p>
+    <ChakraProvider>
+      <TopView/>
+    </ChakraProvider>
   )
 }
 
