@@ -1,4 +1,21 @@
+@import '../../styles/functions';
+
+$form-wrapper-height: 60px;
+
 .formWrapper {
-  height: 60px;
+  height: $form-wrapper-height;
   background: lightgray;
+  display: flex;
+  align-items: center;
+  padding: defaultSpacingTimes(2);
+}
+
+.numberInputControl {
+  display: flex;
+  align-items: center;
+  gap: defaultSpacingTimes(0.5);
+}
+
+.numberInputLabel {
+  margin: 0;
 }
