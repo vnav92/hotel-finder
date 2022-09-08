@@ -11,12 +11,14 @@ import styles from './number-input.module.scss';
 
 type NumberInputProps = {
   id: string;
+  'aria-label': string;
   onValueChange: (value: number) => void;
 };
 
 export const NumberInput: React.FC<NumberInputProps> = ({
   id,
   onValueChange,
+  ...props
 }) => {
   const [currentValue, setCurrentValue] = useState(0);
 
@@ -36,7 +38,11 @@ export const NumberInput: React.FC<NumberInputProps> = ({
         <MinusIcon />
       </Button>
       <ChakraNumberInput isReadOnly={true} value={currentValue}>
-        <ChakraNumberInputField id={id} className={styles.numberInputField} />
+        <ChakraNumberInputField
+          id={id}
+          className={styles.numberInputField}
+          aria-label={props['aria-label']}
+        />
       </ChakraNumberInput>
       <Button
         onClick={() => setCurrentValue((value) => value + 1)}

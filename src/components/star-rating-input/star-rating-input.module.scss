@@ -1,0 +1,10 @@
+@import '../../styles/functions';
+
+.buttonGroupWrapper {
+  display: flex;
+  gap: defaultSpacingTimes(0.25);
+}
+
+.inactiveIcon {
+  opacity: 0.25;
+}

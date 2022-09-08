@@ -1,3 +1,5 @@
+@import '../../styles/functions';
+
 .numberInputWrapper {
   display: flex;
 }
@@ -5,7 +7,7 @@
 .numberInputField {
   pointer-events: none;
   padding: 0 !important;
-  width: 30px !important;
+  width: defaultSpacingTimes(3) !important;
   border: 0px solid !important;
   text-align: center;
   font-size: 1.5rem;

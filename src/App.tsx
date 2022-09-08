@@ -5,7 +5,7 @@ import { TopView } from './modules';
 export const App = () => {
   return (
     <ChakraProvider>
-      <TopView />
+      <TopView onFilterChange={(value) => console.log('---->', value)} />
     </ChakraProvider>
   );
 };
