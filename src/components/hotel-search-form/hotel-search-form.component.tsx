@@ -1,5 +1,5 @@
 import React, { useRef, MutableRefObject } from 'react';
-import { Box, FormControl, FormLabel } from '@chakra-ui/react';
+import { FormControl, FormLabel } from '@chakra-ui/react';
 import classNames from 'classnames';
 
 import styles from './hotel-search-form.module.scss';
@@ -48,7 +48,7 @@ export const HotelSearchForm: React.FC<HotelSearchFormProps> = ({
   };
 
   return (
-    <Box className={classNames(styles.formWrapper, className)}>
+    <form className={classNames(styles.formWrapper, className)}>
       <StarRatingInput
         onRatingChange={(value) => changeFilterValue(value, 'starRating')}
       />
@@ -77,6 +77,6 @@ export const HotelSearchForm: React.FC<HotelSearchFormProps> = ({
           }
         />
       </FormControl>
-    </Box>
+    </form>
   );
 };

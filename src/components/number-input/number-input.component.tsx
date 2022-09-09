@@ -35,7 +35,7 @@ export const NumberInput: React.FC<NumberInputProps> = ({
         aria-label="Subtract one from value"
         background="transparent"
       >
-        <MinusIcon />
+        <MinusIcon data-testid="minus-icon" />
       </Button>
       <ChakraNumberInput isReadOnly={true} value={currentValue}>
         <ChakraNumberInputField
@@ -50,7 +50,7 @@ export const NumberInput: React.FC<NumberInputProps> = ({
         aria-label="Add one to value"
         background="transparent"
       >
-        <AddIcon />
+        <AddIcon data-testid="add-icon" />
       </Button>
     </Box>
   );

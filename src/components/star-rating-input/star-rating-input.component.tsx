@@ -38,6 +38,7 @@ export const StarRatingInput: React.FC<StarRatingInputProps> = ({
                 ? styles.activeIcon
                 : styles.inactiveIcon
             )}
+            data-testid="star-icon"
           />
         </IconButton>
       ))}
