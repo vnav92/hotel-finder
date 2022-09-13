@@ -2,9 +2,10 @@ import React from 'react';
 import { Box, Heading, Text } from '@chakra-ui/react';
 
 import { Hotel, Room } from '../../shared';
+import { Carousel } from '../carousel';
+import { RoomListItem } from '../room-list-item';
 
 import styles from './hotel-list-item.module.scss';
-import { RoomListItem } from '../room-list-item';
 
 type HotelListItemProps = {
   hotelDetails: Hotel;
@@ -18,7 +19,9 @@ export const HotelListItem: React.FC<HotelListItemProps> = ({
   return (
     <Box className={styles.hotelListItemWrapper}>
       <Box className={styles.dataSection}>
-        <Box>carousel</Box>
+        <Box className={styles.carouselWrapper}>
+          <Carousel imagesConfig={hotelDetails.images} />
+        </Box>
         <Box>
           <Heading>{hotelDetails.name}</Heading>
           <Text>{hotelDetails.address}</Text>
