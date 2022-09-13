@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
 
-import styled from './room-list-item.module.scss';
+import styles from './room-list-item.module.scss';
 
 type RoomListItemProps = {
   name: string;
@@ -17,13 +17,13 @@ export const RoomListItem: React.FC<RoomListItemProps> = ({
   description,
 }) => {
   return (
-    <Box className={styled.roomListItemWrapper}>
-      <Box>
+    <Box className={styles.roomListItemWrapper}>
+      <Box className={styles.dataSection}>
         <Text>{name}</Text>
         <Text>Adults: {maxAdults}</Text>
         <Text>Children: {maxChildren}</Text>
       </Box>
-      <Box>
+      <Box className={styles.descriptionSection}>
         <Text>{description}</Text>
       </Box>
     </Box>

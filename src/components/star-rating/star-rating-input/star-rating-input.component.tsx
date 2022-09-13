@@ -3,13 +3,13 @@ import { Box, IconButton } from '@chakra-ui/react';
 import { StarIcon } from '@chakra-ui/icons';
 import classNames from 'classnames';
 
-import styles from './star-rating-input.module.scss';
+import { starPlaceholderArray } from '../star-indicator.const';
+
+import styles from '../star-rating.module.scss';
 
 type StarRatingInputProps = {
   onRatingChange: (currentRating: number) => void;
 };
-
-const starPlaceholderArray = new Array(5).fill('');
 
 export const StarRatingInput: React.FC<StarRatingInputProps> = ({
   onRatingChange,
@@ -22,7 +22,7 @@ export const StarRatingInput: React.FC<StarRatingInputProps> = ({
 
   return (
     <Box
-      className={styles.buttonGroupWrapper}
+      className={styles.groupWrapper}
       role="group"
       aria-label="Chose desired hotel standard"
     >
@@ -30,6 +30,7 @@ export const StarRatingInput: React.FC<StarRatingInputProps> = ({
         <IconButton
           key={index}
           aria-label={`${index + 1} star rating`}
+          className={styles.iconButton}
           onClick={() => setCurrentRating(index + 1)}
         >
           <StarIcon

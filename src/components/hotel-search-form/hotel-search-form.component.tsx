@@ -2,9 +2,9 @@ import React, { useRef, MutableRefObject, memo } from 'react';
 import { FormControl, FormLabel } from '@chakra-ui/react';
 import classNames from 'classnames';
 
-import styles from './hotel-search-form.module.scss';
 import { NumberInput } from '../number-input';
-import { StarRatingInput } from '../star-rating-input';
+import { StarRatingInput } from '../star-rating';
+import styles from './hotel-search-form.module.scss';
 
 export type FilterConfig = {
   starRating: number;

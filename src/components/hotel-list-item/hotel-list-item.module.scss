@@ -1,6 +1,5 @@
 @import '../../styles/functions';
-
-$carousel-wrapper-width: 200px;
+@import '../../styles/variables';
 
 .hotelListItemWrapper {
   width: 80%;
@@ -11,10 +10,19 @@ $carousel-wrapper-width: 200px;
 
 .dataSection {
   display: flex;
+  gap: defaultSpacingTimes(2);
+  padding: defaultSpacingTimes(2);
 }
 
 .carouselWrapper {
-  width: $carousel-wrapper-width;
+  width: $left-column-grid-width;
+}
+
+.informationWrapper {
+  flex: 1;
+}
+
+.starRatingWrapper {
 }
 
 .roomListSection {

@@ -1,3 +1,16 @@
+@import '../../styles/functions';
+@import '../../styles/variables';
+
 .roomListItemWrapper {
   display: flex;
+  padding: defaultSpacingTimes(2);
+  gap: defaultSpacingTimes(2);
+}
+
+.dataSection {
+  min-width: $left-column-grid-width;
+}
+
+.descriptionSection {
+  flex: 1;
 }
