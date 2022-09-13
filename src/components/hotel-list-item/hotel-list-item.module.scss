@@ -1,0 +1,15 @@
+@import '../../styles/functions';
+
+.hotelListItemWrapper {
+  width: 80%;
+  margin: defaultSpacingTimes(1) auto;
+  background: lightgray;
+  box-sizing: border-box;
+}
+
+.dataSection {
+  display: flex;
+}
+
+.roomListSection {
+}

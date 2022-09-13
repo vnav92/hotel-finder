@@ -9,7 +9,8 @@ import { QueryClientProvider } from '@tanstack/react-query';
 const queryClient = new QueryClient();
 
 export const App = () => {
-  const [filterValue, setFilterValue] = useState<FilterConfig>(initialFilterValue);
+  const [filterValue, setFilterValue] =
+    useState<FilterConfig>(initialFilterValue);
 
   return (
     <QueryClientProvider client={queryClient}>

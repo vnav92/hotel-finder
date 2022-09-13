@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FilterConfig } from '../../components';
+import { FilterConfig, HotelListItem } from '../../components';
 import { useGetHotelList } from '../../api';
 import { useGetRoomList } from '../../api/use-room-list.query';
 import {
@@ -37,7 +37,21 @@ export const HotelList: React.FC<HotelListProps> = ({ filterValue }) => {
       ) : (
         <>
           {filteredHotels.length ? (
-            <p>tu renderujemy</p>
+            <section>
+              {Object.keys(targetRoomsByHotel).map((hotelId) => (
+                <>
+                  {targetRoomsByHotel[hotelId].length ? (
+                    <HotelListItem
+                      key={hotelId}
+                      hotelDetails={
+                        filteredHotels.find(({ id }) => id === hotelId)!
+                      }
+                      rooms={targetRoomsByHotel[hotelId]}
+                    />
+                  ) : null}
+                </>
+              ))}
+            </section>
           ) : (
             <p>jeszcze zobaczymy</p>
           )}
