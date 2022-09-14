@@ -5,27 +5,25 @@ import styles from './room-list-item.module.scss';
 
 type RoomListItemProps = {
   name: string;
-  maxAdults: number;
-  maxChildren: number;
+  numberOfAdults: number;
+  numberOfChildren: number;
   description: string;
 };
 
 export const RoomListItem: React.FC<RoomListItemProps> = ({
   name,
-  maxAdults,
-  maxChildren,
+  numberOfAdults,
+  numberOfChildren,
   description,
-}) => {
-  return (
-    <Box className={styles.roomListItemWrapper}>
-      <Box className={styles.dataSection}>
-        <Text>{name}</Text>
-        <Text>Adults: {maxAdults}</Text>
-        <Text>Children: {maxChildren}</Text>
-      </Box>
-      <Box className={styles.descriptionSection}>
-        <Text>{description}</Text>
-      </Box>
+}) => (
+  <Box className={styles.roomListItemWrapper}>
+    <Box className={styles.dataSection}>
+      <Text>{name}</Text>
+      <Text>Adults: {numberOfAdults}</Text>
+      <Text>Children: {numberOfChildren}</Text>
     </Box>
-  );
-};
+    <Box className={styles.descriptionSection}>
+      <Text>{description}</Text>
+    </Box>
+  </Box>
+);

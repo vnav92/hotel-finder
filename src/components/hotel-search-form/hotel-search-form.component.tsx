@@ -49,7 +49,10 @@ export const HotelSearchForm: React.FC<HotelSearchFormProps> = memo(
     };
 
     return (
-      <form className={classNames(styles.formWrapper, className)}>
+      <form
+        className={classNames(styles.formWrapper, className)}
+        data-testid="hotel-search-form"
+      >
         <StarRatingInput
           onRatingChange={(value) => changeFilterValue(value, 'starRating')}
         />

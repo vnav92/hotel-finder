@@ -7,15 +7,18 @@ import { RoomListItem } from '../room-list-item';
 import { StarRaringIndicator } from '../star-rating';
 
 import styles from './hotel-list-item.module.scss';
+import { FilterConfig } from '../hotel-search-form';
 
 type HotelListItemProps = {
   hotelDetails: Hotel;
   rooms: Room[];
+  filterValue: FilterConfig;
 };
 
 export const HotelListItem: React.FC<HotelListItemProps> = ({
   hotelDetails,
   rooms,
+  filterValue,
 }) => {
   return (
     <Box className={styles.hotelListItemWrapper}>
@@ -35,13 +38,13 @@ export const HotelListItem: React.FC<HotelListItemProps> = ({
         </Box>
       </Box>
       <Box className={styles.roomListSection}>
-        {rooms.map(({ longDescription, name, occupancy }, index) => (
+        {rooms.map(({ longDescription, name }, index) => (
           <RoomListItem
             key={index}
             name={name}
             description={longDescription}
-            maxChildren={occupancy.maxChildren}
-            maxAdults={occupancy.maxAdults}
+            numberOfChildren={filterValue.numberOfChildren}
+            numberOfAdults={filterValue.numberOfAdults}
           />
         ))}
       </Box>

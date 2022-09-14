@@ -1,8 +1,7 @@
 import React from 'react';
 
+import { useGetHotelList, useGetRoomList } from '../../api';
 import { FilterConfig, HotelListItem } from '../../components';
-import { useGetHotelList } from '../../api';
-import { useGetRoomList } from '../../api/use-room-list.query';
 import {
   getHotelsWithStarNumberMatch,
   getRoomsByFilteredHotel,
@@ -46,6 +45,7 @@ export const HotelList: React.FC<HotelListProps> = ({ filterValue }) => {
                       hotelDetails={
                         filteredHotels.find(({ id }) => id === hotelId)!
                       }
+                      filterValue={filterValue}
                       rooms={targetRoomsByHotel[hotelId]}
                     />
                   ) : null}

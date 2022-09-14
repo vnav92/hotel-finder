@@ -21,8 +21,9 @@ const defaultSettings: Settings = {
 
 export const Carousel: React.FC<CarouselProps> = ({ imagesConfig }) => (
   <Slider {...defaultSettings}>
-    {imagesConfig.map(({ url, alt }) => (
+    {imagesConfig.map(({ url, alt }, index) => (
       <Image
+        key={index}
         className={styles.sliderImage}
         src={url}
         alt={alt || 'Hotel photo'}
