@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import { Hotel } from '../../shared';
 
 export const getHotelList = (): Promise<Hotel[]> =>

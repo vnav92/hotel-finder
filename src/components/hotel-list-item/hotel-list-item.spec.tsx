@@ -1,9 +1,9 @@
 import React from 'react';
-import { render, screen, within, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
-import { HotelListItem } from './hotel-list-item.component';
 import { Hotel, Room } from '../../shared';
 import { FilterConfig } from '../hotel-search-form';
+import { HotelListItem } from './hotel-list-item.component';
 
 const defaultProps = {
   hotelDetails: {

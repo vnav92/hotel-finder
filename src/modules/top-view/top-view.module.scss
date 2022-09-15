@@ -18,6 +18,7 @@ $heading-color: #ffffff;
 .heading {
   color: $heading-color;
   letter-spacing: defaultSpacingTimes(1);
+  text-align: center;
 }
 
 .searchFormWrapper {

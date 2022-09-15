@@ -1,7 +1,8 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
-import { StarRatingInput } from './star-rating-input.component';
 import userEvent from '@testing-library/user-event';
+
+import { StarRatingInput } from './star-rating-input.component';
 
 const STAR_COUNT = 5;
 

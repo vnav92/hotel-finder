@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
-import { getRoomList } from './requests';
-import { RoomsByHotelId } from '../shared';
+
+import { RoomsByHotelId } from '../../shared';
+import { getRoomList } from '../requests';
 
 export const useGetRoomList = (hotelIds?: string[]) =>
   useQuery<RoomsByHotelId>(

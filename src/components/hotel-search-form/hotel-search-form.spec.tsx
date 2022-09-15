@@ -1,7 +1,8 @@
 import React from 'react';
-import { HotelSearchForm } from './hotel-search-form.component';
-import { render, screen, within, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { render, screen, within, waitFor } from '@testing-library/react';
+
+import { HotelSearchForm } from './hotel-search-form.component';
 
 describe('HotelSearchForm', () => {
   it('should render', () => {

@@ -1,7 +1,8 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
-import { NumberInput } from './number-input.component';
 import userEvent from '@testing-library/user-event';
+
+import { NumberInput } from './number-input.component';
 
 const defaultProps = {
   id: 'number-input-id',

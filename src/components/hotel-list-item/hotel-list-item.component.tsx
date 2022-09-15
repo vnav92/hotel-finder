@@ -3,11 +3,11 @@ import { Box, Heading, Text } from '@chakra-ui/react';
 
 import { Hotel, Room } from '../../shared';
 import { Carousel } from '../carousel';
+import { FilterConfig } from '../hotel-search-form';
 import { RoomListItem } from '../room-list-item';
 import { StarRaringIndicator } from '../star-rating';
 
 import styles from './hotel-list-item.module.scss';
-import { FilterConfig } from '../hotel-search-form';
 
 type HotelListItemProps = {
   hotelDetails: Hotel;
