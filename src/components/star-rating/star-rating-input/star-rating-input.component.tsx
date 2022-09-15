@@ -35,6 +35,7 @@ export const StarRatingInput: React.FC<StarRatingInputProps> = ({
         >
           <StarIcon
             className={classNames(
+              styles.starRating,
               currentRating >= index + 1
                 ? styles.activeIcon
                 : styles.inactiveIcon

@@ -1,10 +1,11 @@
 @import '../../styles/functions';
 @import '../../styles/variables';
+@import '../../styles/colors';
 
 .hotelListItemWrapper {
-  width: 80%;
+  width: $fluid-container-width;
   margin: defaultSpacingTimes(1) auto;
-  background: lightgray;
+  background: $primary-color;
   box-sizing: border-box;
 }
 
@@ -12,18 +13,43 @@
   display: flex;
   gap: defaultSpacingTimes(2);
   padding: defaultSpacingTimes(2);
+  border-bottom: 1px solid $secondary-color;
+  padding: defaultSpacingTimes(2.5);
+}
+
+.addressText {
+  font-size: 1.25rem;
 }
 
 .carouselWrapper {
-  width: $left-column-grid-width;
+  min-width: $left-column-grid-width;
+  width: 20%;
+}
+
+.hotelInfoWrapper {
+  display: flex;
+  flex: 1;
 }
 
 .informationWrapper {
   flex: 1;
 }
 
-.starRatingWrapper {
+@media (max-width: $md-width-breakpoint) {
+  .hotelInfoWrapper {
+    flex-direction: column-reverse;
+  }
 }
 
-.roomListSection {
+@media (max-width: $sm-width-breakpoint) {
+  .dataSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hotelInfoWrapper,
+  .informationWrapper {
+    align-items: center;
+    text-align: center;
+  }
 }

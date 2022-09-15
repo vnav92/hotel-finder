@@ -1,7 +1,5 @@
-import { RoomsByHotelId } from '../../api/use-room-list.query';
 import { FilterConfig } from '../../components';
-import { Hotel } from '../../shared';
-import { Room } from '../../shared/types/room.type';
+import { Hotel, RoomsByHotelId, Room } from '../../shared';
 
 const hasEnoughBeds = (
   occupancy: Room['occupancy'],

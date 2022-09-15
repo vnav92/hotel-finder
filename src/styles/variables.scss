@@ -1,2 +1,7 @@
 $default-spacing: 8px;
 $left-column-grid-width: 220px;
+
+$fluid-container-width: clamp(300px, 80%, 900px);
+
+$md-width-breakpoint: 767px;
+$sm-width-breakpoint: 596px;

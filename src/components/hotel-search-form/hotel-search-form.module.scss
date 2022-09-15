@@ -1,21 +1,44 @@
 @import '../../styles/functions';
+@import '../../styles/colors';
 
-$form-wrapper-height: 60px;
+$narrow-screen-label-width: 65px;
 
 .formWrapper {
-  height: $form-wrapper-height;
-  background: lightgray;
+  background: $primary-color;
   display: flex;
   align-items: center;
-  padding: defaultSpacingTimes(2);
+  justify-content: space-around;
+  padding: defaultSpacingTimes(1) defaultSpacingTimes(2);
+
+  label {
+    margin: 0;
+  }
+}
+
+.numberInputsSection {
+  display: flex;
+  gap: defaultSpacingTimes(4);
 }
 
 .numberInputControl {
   display: flex;
   align-items: center;
-  gap: defaultSpacingTimes(0.5);
+  width: unset !important;
 }
 
-.numberInputLabel {
-  margin: 0;
+@media (max-width: $md-width-breakpoint) {
+  .formWrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $sm-width-breakpoint) {
+  .formWrapper label {
+    width: $narrow-screen-label-width;
+  }
+
+  .numberInputsSection {
+    flex-direction: column;
+    gap: 0;
+  }
 }

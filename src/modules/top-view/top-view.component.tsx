@@ -11,7 +11,12 @@ type TopViewProps = {
 export const TopView: React.FC<TopViewProps> = ({ onFilterChange }) => (
   <>
     <header className={styles.headerWrapper}>
-      <Heading as="h1" size="4xl" className={styles.heading} fontWeight="light">
+      <Heading
+        as="h1"
+        size="4xl"
+        className={styles.heading}
+        fontWeight="hairline"
+      >
         Hotel finder
       </Heading>
     </header>

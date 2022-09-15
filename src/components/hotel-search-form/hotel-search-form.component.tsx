@@ -1,5 +1,5 @@
 import React, { useRef, MutableRefObject, memo } from 'react';
-import { FormControl, FormLabel } from '@chakra-ui/react';
+import { Box, FormControl, FormLabel } from '@chakra-ui/react';
 import classNames from 'classnames';
 
 import { NumberInput } from '../number-input';
@@ -56,36 +56,38 @@ export const HotelSearchForm: React.FC<HotelSearchFormProps> = memo(
         <StarRatingInput
           onRatingChange={(value) => changeFilterValue(value, 'starRating')}
         />
-        <FormControl className={styles.numberInputControl}>
-          <FormLabel
-            htmlFor={adultsInputId}
-            className={styles.numberInputLabel}
-          >
-            Adults
-          </FormLabel>
-          <NumberInput
-            id={adultsInputId}
-            aria-label="Chose desired number of adults"
-            onValueChange={(value) =>
-              changeFilterValue(value, 'numberOfAdults')
-            }
-          />
-        </FormControl>
-        <FormControl className={styles.numberInputControl}>
-          <FormLabel
-            htmlFor={childrenInputId}
-            className={styles.numberInputLabel}
-          >
-            Children
-          </FormLabel>
-          <NumberInput
-            id={childrenInputId}
-            aria-label="Chose desired number of adults"
-            onValueChange={(value) =>
-              changeFilterValue(value, 'numberOfChildren')
-            }
-          />
-        </FormControl>
+        <Box className={styles.numberInputsSection}>
+          <FormControl className={styles.numberInputControl}>
+            <FormLabel
+              htmlFor={adultsInputId}
+              className={styles.numberInputLabel}
+            >
+              Adults
+            </FormLabel>
+            <NumberInput
+              id={adultsInputId}
+              aria-label="Chose desired number of adults"
+              onValueChange={(value) =>
+                changeFilterValue(value, 'numberOfAdults')
+              }
+            />
+          </FormControl>
+          <FormControl className={styles.numberInputControl}>
+            <FormLabel
+              htmlFor={childrenInputId}
+              className={styles.numberInputLabel}
+            >
+              Children
+            </FormLabel>
+            <NumberInput
+              id={childrenInputId}
+              aria-label="Chose desired number of adults"
+              onValueChange={(value) =>
+                changeFilterValue(value, 'numberOfChildren')
+              }
+            />
+          </FormControl>
+        </Box>
       </form>
     );
   }

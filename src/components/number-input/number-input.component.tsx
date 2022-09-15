@@ -38,11 +38,7 @@ export const NumberInput: React.FC<NumberInputProps> = ({
         <MinusIcon data-testid="minus-icon" />
       </Button>
       <ChakraNumberInput isReadOnly={true} value={currentValue}>
-        <ChakraNumberInputField
-          id={id}
-          className={styles.numberInputField}
-          aria-label={props['aria-label']}
-        />
+        <ChakraNumberInputField id={id} aria-label={props['aria-label']} />
       </ChakraNumberInput>
       <Button
         onClick={() => setCurrentValue((value) => value + 1)}

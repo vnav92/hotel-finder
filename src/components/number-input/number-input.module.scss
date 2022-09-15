@@ -1,18 +1,20 @@
 @import '../../styles/functions';
 
+$sm-width-screen-label-width: 65px;
+
 .numberInputWrapper {
   display: flex;
-}
 
-.numberInputField {
-  pointer-events: none;
-  padding: 0 !important;
-  width: defaultSpacingTimes(3) !important;
-  border: 0px solid !important;
-  text-align: center;
-  font-size: 1.5rem;
-}
+  input {
+    pointer-events: none;
+    padding: 0;
+    width: defaultSpacingTimes(3);
+    border: 0px solid;
+    text-align: center;
+    font-size: 1.125rem;
+  }
 
-.valueChangeButton {
-  font-size: 2rem;
+  button {
+    font-size: 0.75rem;
+  }
 }

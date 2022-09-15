@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Text, Heading } from '@chakra-ui/react';
 
 import styles from './room-list-item.module.scss';
 
@@ -18,9 +18,11 @@ export const RoomListItem: React.FC<RoomListItemProps> = ({
 }) => (
   <Box className={styles.roomListItemWrapper}>
     <Box className={styles.dataSection}>
-      <Text>{name}</Text>
-      <Text>Adults: {numberOfAdults}</Text>
-      <Text>Children: {numberOfChildren}</Text>
+      <Heading as="h4" size="md" fontWeight="medium">
+        {name}
+      </Heading>
+      <Text fontWeight="light">Adults: {numberOfAdults}</Text>
+      <Text fontWeight="light">Children: {numberOfChildren}</Text>
     </Box>
     <Box className={styles.descriptionSection}>
       <Text>{description}</Text>

@@ -26,18 +26,26 @@ export const HotelListItem: React.FC<HotelListItemProps> = ({
         <Box className={styles.carouselWrapper}>
           <Carousel imagesConfig={hotelDetails.images} />
         </Box>
-        <Box className={styles.informationWrapper}>
-          <Heading>{hotelDetails.name}</Heading>
-          <Text>{hotelDetails.address}</Text>
-          <Text>{hotelDetails.address1}</Text>
-        </Box>
-        <Box className={styles.starRatingWrapper}>
-          <StarRaringIndicator
-            currentRating={Number(hotelDetails.starRating)}
-          />
+        <Box className={styles.hotelInfoWrapper}>
+          <Box className={styles.informationWrapper}>
+            <Heading size="xl" fontWeight="light">
+              {hotelDetails.name}
+            </Heading>
+            <Text fontWeight="light" className={styles.addressText}>
+              {hotelDetails.address}
+            </Text>
+            <Text fontWeight="light" className={styles.addressText}>
+              {hotelDetails.address1}
+            </Text>
+          </Box>
+          <Box>
+            <StarRaringIndicator
+              currentRating={Number(hotelDetails.starRating)}
+            />
+          </Box>
         </Box>
       </Box>
-      <Box className={styles.roomListSection}>
+      <Box>
         {rooms.map(({ longDescription, name }, index) => (
           <RoomListItem
             key={index}

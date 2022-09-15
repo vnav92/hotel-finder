@@ -1,0 +1,20 @@
+@import '../../styles/colors.scss';
+@import '../../styles/functions.scss';
+@import '../../styles/variables.scss';
+
+$warning-color: #e83c21;
+
+.wrapper {
+  text-align: center;
+  color: $secondary-color;
+  border: 2px solid $secondary-color;
+  width: fit-content;
+  margin: defaultSpacingTimes(3) auto;
+  padding: defaultSpacingTimes(3) defaultSpacingTimes(6);
+  border-radius: defaultSpacingTimes(2);
+}
+
+.errorPanelWrapper {
+  color: $warning-color;
+  border-color: $warning-color;
+}

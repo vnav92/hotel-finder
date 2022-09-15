@@ -24,6 +24,7 @@ export const StarRaringIndicator: React.FC<StarRaringIndicatorProps> = ({
         <StarIcon
           key={index}
           className={classNames(
+            styles.starIcon,
             currentRating >= index + 1 ? styles.activeIcon : styles.inactiveIcon
           )}
           data-testid="star-icon"

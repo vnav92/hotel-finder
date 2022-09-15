@@ -1,4 +1,8 @@
+@import '../../styles/variables.scss';
+@import '../../styles/functions.scss';
+
 $header-wrapper-height: 350px;
+$heading-color: #ffffff;
 
 .headerWrapper {
   height: $header-wrapper-height;
@@ -12,12 +16,24 @@ $header-wrapper-height: 350px;
 }
 
 .heading {
-  color: white;
+  color: $heading-color;
+  letter-spacing: defaultSpacingTimes(1);
 }
 
 .searchFormWrapper {
   transform: translateY(-50%);
-  margin: auto;
-  width: 60%;
-  min-width: 320px;
+  margin: 0 auto defaultSpacingTimes(-3.5) auto;
+  width: $fluid-container-width;
+}
+
+@media (min-width: $sm-width-breakpoint) and (max-width: $md-width-breakpoint) {
+  .searchFormWrapper {
+    margin-bottom: defaultSpacingTimes(-6);
+  }
+}
+
+@media (max-width: $sm-width-breakpoint) {
+  .searchFormWrapper {
+    margin-bottom: defaultSpacingTimes(-8.5);
+  }
 }
