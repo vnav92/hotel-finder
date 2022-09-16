@@ -73,7 +73,6 @@ export const HotelList: React.FC<HotelListProps> = ({ filterValue }) => {
                       hotelDetails={
                         filteredHotels.find(({ id }) => id === hotelId)!
                       }
-                      filterValue={filterValue}
                       rooms={targetRoomsByHotel[hotelId]}
                     />
                   ) : null}

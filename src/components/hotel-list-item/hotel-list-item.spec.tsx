@@ -17,12 +17,12 @@ const defaultProps = {
     {
       longDescription: 'test long description',
       name: 'test room name',
+      occupancy: {
+        maxAdults: 2,
+        maxChildren: 1,
+      },
     },
   ] as Room[],
-  filterValue: {
-    numberOfAdults: 2,
-    numberOfChildren: 1,
-  } as FilterConfig,
 };
 
 describe('HotelListItem', () => {
@@ -48,10 +48,12 @@ describe('HotelListItem', () => {
       screen.getByText(defaultProps.rooms[0].longDescription)
     ).toBeInTheDocument();
     expect(
-      screen.getByText(`Adults: ${defaultProps.filterValue.numberOfAdults}`)
+      screen.getByText(`Adults: ${defaultProps.rooms[0].occupancy.maxAdults}`)
     ).toBeInTheDocument();
     expect(
-      screen.getByText(`Children: ${defaultProps.filterValue.numberOfChildren}`)
+      screen.getByText(
+        `Children: ${defaultProps.rooms[0].occupancy.maxChildren}`
+      )
     ).toBeInTheDocument();
   });
 });

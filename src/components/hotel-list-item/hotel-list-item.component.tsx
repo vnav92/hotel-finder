@@ -3,7 +3,6 @@ import { Box, Heading, Text } from '@chakra-ui/react';
 
 import { Hotel, Room } from '../../shared';
 import { Carousel } from '../carousel';
-import { FilterConfig } from '../hotel-search-form';
 import { RoomListItem } from '../room-list-item';
 import { StarRaringIndicator } from '../star-rating';
 
@@ -12,13 +11,11 @@ import styles from './hotel-list-item.module.scss';
 type HotelListItemProps = {
   hotelDetails: Hotel;
   rooms: Room[];
-  filterValue: FilterConfig;
 };
 
 export const HotelListItem: React.FC<HotelListItemProps> = ({
   hotelDetails,
   rooms,
-  filterValue,
 }) => {
   return (
     <Box className={styles.hotelListItemWrapper}>
@@ -46,13 +43,13 @@ export const HotelListItem: React.FC<HotelListItemProps> = ({
         </Box>
       </Box>
       <Box>
-        {rooms.map(({ longDescription, name }, index) => (
+        {rooms.map(({ longDescription, name, occupancy }, index) => (
           <RoomListItem
             key={index}
             name={name}
             description={longDescription}
-            numberOfChildren={filterValue.numberOfChildren}
-            numberOfAdults={filterValue.numberOfAdults}
+            numberOfChildren={occupancy.maxChildren}
+            numberOfAdults={occupancy.maxAdults}
           />
         ))}
       </Box>
